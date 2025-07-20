@@ -3,7 +3,7 @@ This project implements a Deep Q-Network (DQN) agent to play Atari's Breakout ga
 
 ## Project Structure
 ```
-dqn-breakout/
+Deep_Q_Learning/
 ├── train.py                     # Script for training the DQN agent  
 ├── play.py                      # Script for evaluating the trained agent  
 ├── README.md                    # This file  
@@ -65,6 +65,16 @@ Loads the trained model,
 Runs evaluation episodes with GreedyQPolicy, 
 Visualizes agent performance in real-time, 
 Uses env.render() for GUI display
+
+### 📋 Hyperparameter Tuning Table
+
+| Hyperparameter Set | Noted Behavior |
+|--------------------|----------------|
+| `lr=1e-4`, `γ=0.99`, `batch=32`, `ε_start=1.0`, `ε_end=0.01`, `ε_decay≈0.9` (via `exploration_fraction=0.1`), `buffer=10000`, `policy=CNN` | Slower start, but stable improvement after 1k steps. Performs well on visual tasks. Suitable for environments needing spatial awareness. |
+| `lr=2.5e-4`, `γ=0.95`, `batch=32`, `ε_start=1.0`, `ε_end=0.02`, `ε_decay≈0.8` (via `exploration_fraction=0.2`), `buffer=5000`, `policy=MLP` | Faster initial learning, but performance plateaued early. Works better in simpler state spaces, but unstable over long training. |
+| `lr=1e-5`, `γ=0.99`, `batch=16`, `ε_start=0.8`, `ε_end=0.1`, `ε_decay=0.999` | Slower but more stable learning, conservative exploration strategy. |
+| `lr=2e-4`, `γ=0.98`, `batch=128`, `ε_start=1.0`, `ε_end=0.02`, `ε_decay=0.996` | Balanced approach with larger batch size for stable updates. |
+
 
 ## Training Results
 

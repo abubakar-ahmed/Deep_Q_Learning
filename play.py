@@ -39,7 +39,7 @@ for episode in range(num_episodes):
     print(f"Episode {episode + 1} started...")
 
     while not done:
-        # Using GreedyQPolicy (deterministic=True means greedy action selection)
+        # Use GreedyQPolicy (deterministic=True means greedy action selection)
         action, _ = model.predict(obs, deterministic=True)
 
         # Take the action in the environment
@@ -49,7 +49,7 @@ for episode in range(num_episodes):
         total_reward += reward
         step_count += 1
         
-        # Limit episode length to avoid infinite loops
+        # Optional: Limit episode length to avoid infinite loops
         if step_count > 10000:
             break
 

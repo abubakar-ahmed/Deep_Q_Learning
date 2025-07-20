@@ -66,7 +66,7 @@ Runs evaluation episodes with GreedyQPolicy,
 Visualizes agent performance in real-time, 
 Uses env.render() for GUI display
 
-### 📋 Hyperparameter Tuning Table
+## 📋 Hyperparameter Tuning Table
 
 | Hyperparameter Set | Noted Behavior |
 |--------------------|----------------|
@@ -94,8 +94,6 @@ Key Metrics Observed:
 - Batch Size: Small batches (16-32) used for memory efficiency while maintaining stable updates
 - Buffer Size: Significantly reduced (5000-10000) to fit within system memory constraints
 - Exploration Strategy: Extended exploration phases (0.1-0.3 fraction) to handle complex visual environment
-
-## Add hyperparameter table here
 
 ## Video Demonstration
 

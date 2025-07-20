@@ -2,29 +2,17 @@
 This project implements a Deep Q-Network (DQN) agent to play Atari's Breakout game using Stable-Baselines3 and Gymnasium. The implementation includes both training and evaluation scripts.
 
 ## Project Structure
+```
 dqn-breakout/
-
-│
-
-├── train.py          # Script for training the DQN agent
-
-├── play.py           # Script for evaluating the trained agent
-
-├── README.md         # This file
-
-│
-
-├── models/           # Directory for saved models (created during training)
-
-│   └── policy.zip    # Trained model file (created after training)
-
-│   └── dqn_model_config1_cnn.zip
-
-│   └── dqn_model_config2_mlp.zip
-
-│
-
-└── logs/            # Training logs for tensorboard (created during training)
+├── train.py                     # Script for training the DQN agent  
+├── play.py                      # Script for evaluating the trained agent  
+├── README.md                    # This file  
+├── models/                      # Directory for saved models (created during training)  
+│   ├── policy.zip               # Trained model file (created after training)  
+│   ├── dqn_model_config1_cnn.zip  
+│   └── dqn_model_config2_mlp.zip  
+└── logs/                        # Training logs for TensorBoard (created during training)
+```
 
 ## Prerequisites
 System Requirements

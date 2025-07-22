@@ -83,8 +83,8 @@ Based on the TensorBoard logs, the training showed the following progression:
 Key Metrics Observed:
 
 - Episode Length: Started around 67 steps, progressively increased to ~94 steps
-- Episode Reward: Improved from ~0.5 to ~1.0+ over training
-- Exploration Rate: Decreased from ~0.75 to ~0.14 (epsilon decay)
+- Episode Reward: Improved from ~1.0 to ~1.0+ over training
+- Exploration Rate: Decreased from ~1.0 to ~0.14 (epsilon decay)
 - Training FPS: Maintained around 2000-4000 FPS
 
 ## Hyperparameter Analysis:

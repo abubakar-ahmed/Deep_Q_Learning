@@ -70,10 +70,10 @@ Uses env.render() for GUI display
 
 | Hyperparameter Set | Noted Behavior |
 |--------------------|----------------|
-| `lr=1e-4`, `γ=0.99`, `batch=32`, `ε_start=1.0`, `ε_end=0.01`, `ε_decay≈0.9` (via `exploration_fraction=0.1`), `buffer=10000`, `policy=CNN` | Slower start, but stable improvement after 1k steps. Performs well on visual tasks. Suitable for environments needing spatial awareness. |
-| `lr=2.5e-4`, `γ=0.95`, `batch=32`, `ε_start=1.0`, `ε_end=0.02`, `ε_decay≈0.8` (via `exploration_fraction=0.2`), `buffer=5000`, `policy=MLP` | Faster initial learning, but performance plateaued early. Works better in simpler state spaces, but unstable over long training. |
-| `lr=1e-5`, `γ=0.99`, `batch=16`, `ε_start=0.8`, `ε_end=0.1`, `ε_decay=0.999` | Slower but more stable learning, conservative exploration strategy. |
-| `lr=2e-4`, `γ=0.98`, `batch=128`, `ε_start=1.0`, `ε_end=0.02`, `ε_decay=0.996` | Balanced approach with larger batch size for stable updates. |
+| `policy=CnnPolicy`, `lr=1e-4`, `γ=0.99`, `batch=32`, `buffer=10000`, `ε_start=1.0`, `ε_end=0.01`, `exploration_fraction=0.1` | Stable learning, good for visual tasks, balanced exploration. |
+| `policy=MlpPolicy`, `lr=2.5e-4`, `γ=0.95`, `batch=32`, `buffer=5000`, `ε_start=1.0`, `ε_end=0.02`, `exploration_fraction=0.2` | Faster initial learning, better for simple states, longer exploration, Stll didnt work well though. |
+| `policy=CnnPolicy`, `lr=5e-4`, `γ=0.98`, `batch=32`, `buffer=10000`, `ε_start=1.0`, `ε_end=0.005`, `exploration_fraction=0.15` | Faster learning, delayed start, near-greedy exploitation. |
+| `policy=CnnPolicy`, `lr=1e-5`, `γ=0.999`, `batch=16`, `buffer=5000`, `ε_start=1.0`, `ε_end=0.1`, `exploration_fraction=0.3` | Slow learning, prioritizes long-term reward, slow exploration decay. still didnt work well though. |
 
 
 ## Training Results
